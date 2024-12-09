@@ -61,7 +61,7 @@ const Cart = ({ cart, removeFromCart, setCart }) => {
               <img src={item.img} alt={item.name} className="cart-img" />
               <div className="cart-item-details">
                 <h3>{item.name}</h3>
-                <p>Quantity: {item.quantity}</p>
+                <p className="food-quantity">Quantity: {item.quantity}</p>
                 <p className="food-prize">Rs.{parseInt(item.prize.replace("Rs. ", ""), 10) * item.quantity}</p>
               </div>
               <button
