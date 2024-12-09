@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
 const User = require("./User");
 const Order = require("./Order");
+const cors = require("cors");
 
 const app = express();
 const PORT = 5000;
@@ -13,7 +14,14 @@ mongoose.connect("mongodb+srv://vkrm:vkrm@eatsure.vvwth.mongodb.net/?retryWrites
     .then(() => console.log("Connected to MongoDB"))
     .catch((err) => console.error("Error connecting to MongoDB:", err));
 
-app.use(cors());
+const corsOptions = {
+    origin: "https://eat-sure.vercel.app", // Frontend domain
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    credentials: true, // Include credentials if necessary
+};
+
+app.use(cors(corsOptions));
+
 app.use(bodyParser.json());
 
 const JWT_SECRET = "vikram123";
