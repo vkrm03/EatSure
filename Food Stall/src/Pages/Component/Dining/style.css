@@ -1,0 +1,98 @@
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    column-gap: 60px;
+    padding: 10px;
+    justify-items: center;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+.card {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+}
+
+.card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.card h2 {
+    font-size: 1.3em;
+    margin-top: 0;
+    color: #333;
+}
+
+.card p {
+    font-size: 1em;
+    color: #777;
+    margin: 10px 0;
+}
+.card button {
+    font-family: "Noto Sans", sans-serif;
+    border-radius: 8%;
+    background-color: #494999;
+    color: white;
+    border: none;
+    padding: 1px 10px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.card button:hover {
+    background-color: #3d3d83;
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+    .card {
+        padding: 10px;
+    }
+
+    .card h2 {
+        font-size: 0.6em;
+    }
+    .card button {
+        font-size: 0.4em;
+    }
+    
+    .card p {
+        font-size: 0.4em;
+    }
+    .card img {
+        width: 60px;
+        height: 60px;
+    }
+
+}
+@media (min-width: 200px) and (max-width: 600px) {
+    .card {
+        padding: 10px;
+    }
+
+    .card h2 {
+        font-size: 1.2em;
+    }
+    .card button {
+        font-size: 0.4em;
+    }
+    
+    .card p {
+        font-size: 0.8em;
+    }
+    .card img {
+        width: 60px;
+        height: 60px;
+    }
+
+}

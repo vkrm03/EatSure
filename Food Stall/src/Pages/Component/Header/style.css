@@ -1,0 +1,253 @@
+.header {
+    margin-top: 10px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #ddd;
+    border-top: 0.2px solid #ddd;
+}
+
+.header-logo {
+    height: 60px;
+    max-width: 120px;
+    margin-right: 20px;
+    object-fit: contain;
+}
+
+.header-right {
+    display: flex;
+    flex: 0;
+    align-items: center;
+}
+
+.header-location-search {
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(28, 28, 28, 0.1);
+    width: 200px; /* Fixed width for better layout */
+    background-color: white;
+    padding: 5px 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.header-location-search:hover {
+    box-shadow: 0 4px 12px rgba(28, 28, 28, 0.2);
+}
+
+.location-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.location-icon {
+    display: flex;
+    align-items: center;
+    color: rgb(28, 28, 73);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.location-icon .fa-location-dot {
+    margin-right: 8px;
+    font-size: 16px;
+    color: #5f3fa4;
+}
+
+.location-text {
+    color: #1c1c49;
+}
+
+.dropdown-icon {
+    margin-left: 8px;
+    font-size: 14px;
+    color: #808080;
+}
+
+.location-separator {
+    height: 40px;
+    width: 1px;
+    background-color: #a79797;
+    margin: 0 10px;
+    color: rgb(207, 207, 207);
+}
+
+.header-search {
+    display: flex;
+    align-items: center;
+    color: #494646;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    font-size: 18px;
+    width: 320px;
+    margin-left: 5px;
+    background-color: #F8F8F8;
+}
+
+.profile-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    position: relative;
+    cursor: pointer;
+}
+
+.user-name {
+    margin-left: 10px;
+}
+
+@media (max-width: 1300px) and (min-width: 1000px) {
+    .search-input {
+        font-size: 18px;
+        width: 170px;
+    }
+}
+
+@media (max-width: 1000px) and (min-width: 700px) {
+    .search-input {
+        font-size: 18px;
+        width: 170px;
+    }
+    .header-logo {
+        height: 40px;
+    }
+    .header-right {
+        width: 100%;
+    }
+    .header-location-search {
+        width: 100%;
+    }
+}
+
+@media (max-width: 700px) and (min-width: 600px) {
+    .search-input {
+        font-size: 16px;
+        width: 100px;
+    }
+    .header-logo {
+        height: 30px;
+    }
+
+    .header-right {
+        width: 100%;
+
+    }
+    .header-location-search {
+        width: 100px;
+        padding: 0px 0px 0px 0px;
+    }
+}
+
+@media (max-width: 600px) and (min-width: 500px) {
+    .search-input {
+        font-size: 12px;
+        width: 120px;
+    }
+    .header-logo {
+        height: 30px;
+    }
+    .header-right {
+        width: 100%;
+    }
+    .header-location-search {
+        width: 100%;
+    }
+    .profile-wrapper {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 500px) and (min-width: 430px) {
+    .search-input {
+        font-size: 12px;
+        width: 40px;
+    }
+    .header-logo {
+        height: 35px;
+    }
+    .header-right {
+        width: 100%;
+    }
+    .header-location-search {
+        width: 80%;
+    }
+    .location-text {
+        font-size: 8px;
+    }
+    .profile-wrapper {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 430px) and (min-width: 300px) {
+    .search-input {
+        font-size: 10px;
+        margin-left: auto;
+        width: 40px;
+    }
+    .header-logo {
+        margin-right: auto;
+        height: 35px;
+    }
+    .header-right {
+        width: 80%;
+    }
+    .header-location-search {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+    .location-text {
+        font-size: 8px;
+    }
+    .profile-wrapper {
+        font-size: 10px;
+    }
+    .header {
+        padding-right: 50px;
+    }
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 10;
+    min-width: 100px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.dropdown-item {
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #000000;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dropdown-item:hover {
+    background-color: #f0f0f0;
+}
+
+.profile-wrapper:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.drop-down-item {
+    color: #000000;
+}

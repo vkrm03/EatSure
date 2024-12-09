@@ -1,0 +1,60 @@
+.order-page {
+    padding: 200px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+}
+
+.order-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.order-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.order-item {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.order-details {
+    margin-bottom: 10px;
+}
+
+.order-date {
+    font-weight: bold;
+}
+
+.order-item-list {
+    list-style: none;
+    padding: 0;
+}
+
+.order-item-entry {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.order-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+
+.order-item-info h4 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.order-summary {
+    text-align: right;
+    font-weight: bold;
+}
