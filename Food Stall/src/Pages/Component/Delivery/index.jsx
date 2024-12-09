@@ -144,7 +144,7 @@ export default function Delivery( {addToCart}) {
                         <p className="food-prize">{item.prize}</p>
                         <button
                             className="add-button"
-                            onClick={handleAddToCart(item)}
+                            onClick={() => handleAddToCart(item)}
                         >
                             Add to Cart 
                         </button>

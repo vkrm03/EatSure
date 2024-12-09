@@ -41,6 +41,7 @@ function App() {
     };
 
     const addToCart = (item) => {
+        if (isLoggedIn) {
             setCart((prevCart) => {
                 const itemInCart = prevCart.find((cartItem) => cartItem.id === item.id);
                 if (itemInCart) {
@@ -53,6 +54,9 @@ function App() {
                     return [...prevCart, { ...item, quantity: 1 }];
                 }
             });
+        } else {
+            alert("Please login to add to cart.");
+        }
     };
     
 
