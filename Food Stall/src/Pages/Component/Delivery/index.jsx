@@ -124,7 +124,7 @@ export default function Delivery( {addToCart}) {
             addToCart(item);
             toast.success(item.name + ' added to cart!');
         } else {
-            toast.info("Please login to add to cart");
+            toast.error("Please login to add to cart");
         }
     };  
     return (
