@@ -5,7 +5,6 @@ const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
 const User = require("./User");
 const Order = require("./Order");
-const cors = require("cors");
 
 const app = express();
 const PORT = 5000;
