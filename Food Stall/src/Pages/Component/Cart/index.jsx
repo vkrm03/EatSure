@@ -5,6 +5,7 @@ import uri from "../../../../public/Uri";
 import "./style.css";
 
 const Cart = ({ cart, removeFromCart, setCart }) => {
+  
   const calculateTotal = () => {
     return cart.reduce(
       (total, item) => total + parseInt(item.prize.replace("Rs. ", ""), 10) * item.quantity,
@@ -32,7 +33,6 @@ const Cart = ({ cart, removeFromCart, setCart }) => {
       };
 
       const response = await axios.post(uri + "/checkout", orderData);
-      console.log(orderData);
       
 
       if (response.status === 200) {
@@ -62,7 +62,7 @@ const Cart = ({ cart, removeFromCart, setCart }) => {
               <div className="cart-item-details">
                 <h3>{item.name}</h3>
                 <p>Quantity: {item.quantity}</p>
-                <p className="food-prize">{item.prize}</p>
+                <p className="food-prize">Rs.{parseInt(item.prize.replace("Rs. ", ""), 10) * item.quantity}</p>
               </div>
               <button
                 className="remove-button"

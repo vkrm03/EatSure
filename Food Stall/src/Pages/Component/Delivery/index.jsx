@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import Cart from "../Cart";
+import toast, { Toaster } from 'react-hot-toast';
 import "./Delivery.css";
 
 const foodItems = [
@@ -124,13 +122,14 @@ export default function Delivery( {addToCart}) {
     const handleAddToCart = (item) => {
         if (localStorage.getItem('username') != null) {
             addToCart(item);
+            toast.success(item.name + ' added to cart!');
         } else {
             toast.info("Please login to add to cart");
         }
     };  
     return (
         <div className="delivery-page">
-            <ToastContainer hideProgressBar/>
+            <Toaster position="top-center" />
             <div className="delivery-header">   
                 <h1>Welcome to EatSure</h1>
                 <p>Find the best food delivery options near you!</p>

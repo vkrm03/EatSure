@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Order from "./Pages/Component/Orders/index.jsx";
+import { ToastContainer } from "react-toastify";
 import "./index.css";
 import HomePage from "./Pages/Home/index.jsx";
 import Cart from "./Pages/Component/Cart/index.jsx";

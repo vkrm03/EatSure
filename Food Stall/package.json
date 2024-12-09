@@ -15,8 +15,10 @@
     "axios": "^1.7.9",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-hot-toast": "^2.4.1",
     "react-router-dom": "^7.0.1",
     "react-toastify": "^10.0.6",
+    "sweetalert2": "^11.14.5",
     "use-places-autocomplete": "^4.0.1"
   },
   "devDependencies": {
